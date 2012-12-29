@@ -12,6 +12,6 @@ Userchrome.css for Thunderbird 17 to make it yummy and pretty.
 
 **Installation**
 - Add the userChrome.css to your Thunderbird directory ~/.thunderbird/[uid].default/chrome/
--- If the chrome folder doesn't exist, create it! 
--- Restart Thunderbird
+- - If the chrome folder doesn't exist, create it! 
+- - Restart Thunderbird
 
