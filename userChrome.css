@@ -155,7 +155,7 @@ Attachment Bar
 }
 
 #attachmentSaveAllSingle .toolbarbutton-menubutton-button, #attachmentSaveAll .toolbarbutton-menubutton-button {
-	background:none !important;
+/*	background:none !important;
 	background-color:rgba(0,0,0,.12) !important;
 	border:solid 1px rgba(0,0,0,.1) !important;
 	padding-left:8px !important;
@@ -166,13 +166,20 @@ Attachment Bar
 	font-size:11px !important;
 	-moz-appearance:none !important;
 	line-height:20px;
-	text-shadow:0px -1px 0px rgba(0,0,0,.2);
-	padding:4px 10px 4px 8px !important;
+	padding:4px 10px 4px 10px !important;
+	text-shadow:0px -1px 0px rgba(0,0,0,.2) !important;*/
+	text-shadow:0px -1px 0px rgba(0,0,0,.2) !important;
+	padding:4px 10px 4px 6px !important;
+	background-color:rgba(0,0,0,.12) !important;
+	border:solid 1px rgba(0,0,0,.1) !important;
+	box-shadow:inset 0px 1px 0px rgba(255,255,255,.4), 0px 3px 10px rgba(0,0,0,.05) !important;
+	line-height:20px;
+	color: #000 !important;
 }
 
 #attachmentSaveAllSingle .toolbarbutton-menubutton-button:hover, #attachmentSaveAll .toolbarbutton-menubutton-button:hover {
-	background-color:rgba(0,0,0,.2) !important;
-	border:solid 1px rgba(0,0,0,.15) !important;
+/*	background-color:rgba(0,0,0,.2) !important;
+	border:solid 1px rgba(0,0,0,.15) !important;*/
 }
 
 #attachmentSaveAllSingle:hover, #attachmentSaveAll:hover {
@@ -224,7 +231,7 @@ Toolbox, Panels and the Likes
 	font-size:12px !important;
 }
 
-.toolbarbutton-text {
+#mail-toolbox .toolbarbutton-text {
 	font-size:11px !important;
 	color:rgba(0,0,0,.8) !important;
 	text-shadow:0px 1px 0px rgba(255,255,255,.5) !important;
