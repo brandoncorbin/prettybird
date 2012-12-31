@@ -1,7 +1,7 @@
 Pretty Bird for Thunderbird 17
 ==========
 
-![Thunderbird 17 userchrome](http://i.imgur.com/ZvWVm.png)
+![Thunderbird 17 userchrome](http://i.imgur.com/oB0b0.png)
 
 Userchrome.css for Thunderbird 17 to make it yummy and pretty. 
 
