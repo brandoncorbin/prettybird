@@ -11,10 +11,12 @@ Dec 29th 2012
 Globals
 ****************************************/
 
-*{
+* {
 	outline: 0 !important; 
 	-moz-transition: all .1s ease; 
 	-moz-box-sizing: border-box;
+	outline-width: 0 !important;
+	outline-style: none !important;
 }
 
 window {
@@ -45,39 +47,59 @@ Message Window
 
 #singlemessage { 
 	background-color:#D8DEE5 !important;
-	
+	box-shadow:inset 1px 0px 1px rgba(0,0,0,.1) !important;
 }
 
 #msgHeaderView {
 	border-bottom:none !important;
 	background:none !important;
 	margin:0px 10px !important;
-	min-height:100px !important;
-	max-height:300px !important;
-	height: auto !important;
 	text-shadow:0px 1px 0px rgba(255,255,255,.7);
 	position: relative !important;
+
 }
 
-#otherActionsBox {
+/*#otherActionsBox {
 	position:absolute !important;
 	bottom:0px !important;
 	right:0px !important;
+}*/
+
+
+
+#msgHeaderView .headerName  { 
+	max-width:50px !important;
+	width:50px !important;
+	display:inline-block !important;
+	
 }
 
-#msgHeaderView .headerName { 
-	display:none !important;
+#msgHeaderView #expandedsubjectLabel { 
+
 }
 
-#expandedsubjectLabel { display:none !important;}
-
+#expandedfromBox label {
+	color:rgba(0,0,0,.4) !important;
+}
 
 #expandedsubjectBox .headerValue {
 	font-size:20px !important;
 	line-height:25px !important;
-
+	display:inline-block !important;
+	
 }
-#expandedHeadersTopBox {
+
+#expandedHeadersColumns column {
+	
+}
+
+
+#msgHeaderView #otherActionsButton { display:none !important;}
+
+#mgsHeaderView .emailStar {
+	margin-left:6px !important;
+}
+/*#expandedHeadersTopBox {
 	padding:0px !important;
 	margin-top:6px !important;
 	margin-bottom:-6px !important;
@@ -89,14 +111,18 @@ Message Window
 	margin:0px !important;
 	margin-top:-20px !important;
 	margin-bottom:-5px !important;
-}
+}*/
 
 #messagepane {
+
 	margin:10px !important;
 	background-color:#FFF !important;
-	box-shadow:0px 1px 2px rgba(0,0,0,.3) !important;
+	box-shadow:1px 2px 4px rgba(0,0,0,.2), inset 0px 1px 0px rgba(255,255,255,.4) !important;
 	border-radius:2px !important;
 	font-size:12px !important;
+	border:solid 1px rgba(0,0,0,.1) !important;
+	border-right:solid 1px rgba(0,0,0,.3) !important;
+	border-bottom:solid 1px rgba(0,0,0,.3) !important;
 }
 
 /****************************************
@@ -209,7 +235,6 @@ TREES! (Data Grids and Lists)
 tree, treecell,treechildren,treecol,treecols,treeitem,treerow,treeseparator
 {
 	box-shadow: none !important; 
-	background-image: none !important; 
 	background-color: #fafafa !important; 
 	color: #444; 
 }
@@ -243,6 +268,44 @@ treechildren {
 /****************************************
 Email Data List
 ****************************************/
+#threadTree treecol {
+	-moz-appearance:none !important;
+	background:-moz-linear-gradient(top, #C8C8C8 0%, #B2B2B2 100%) !important;
+	color:rgba(0,0,0,.7) !important;
+	text-shadow:0px 1px 0px rgba(255,255,255,.5) !important;
+	list-style-image:none !important;
+	border:none !important;
+	border-left:solid 1px rgba(0,0,0,.15) !important;
+	border-right:solid 1px rgba(255,255,255,.3) !important;
+	line-height:20px !important;
+	padding:5px 3px !important;
+	height:20px !important;
+	border-bottom:solid 1px rgba(0,0,0,.2) !important;
+	outline-style: none !important;
+	font-weight:bold !important;
+	font-size:11px !important;
+	box-shadow: inset 0px 1px 0px rgba(255,255,255,.3) !important;
+}
+
+#threadTree treecol:hover {
+	background:-moz-linear-gradient(top, #C8C8C8 0%, #A5A5A5 100%) !important;
+}
+
+#threadTree treecolpicker {
+	-moz-appearance:none !important;
+	background:-moz-linear-gradient(top, #C8C8C8 0%, #A5A5A5 100%) !important;
+	color:rgba(0,0,0,.7) !important;
+	text-shadow:0px 1px 0px rgba(255,255,255,.5) !important;
+	list-style-image:none !important;
+	border:solid 1px rgba(0,0,0,.1) !important;
+	line-height:20px !important;
+	padding:5px 3px !important;
+	height:20px !important;
+	border-bottom:solid 1px rgba(0,0,0,.2) !important;
+	outline-style: none !important;
+	border-top:none !important;
+}
+
 #threadTree treechildren::-moz-tree-row(selected) {
 	outline: none !important;
 	-moz-appearance:none !important;
@@ -250,9 +313,9 @@ Email Data List
 	background-image:  -moz-linear-gradient(top, #528EEB 0%, #437CD4 100%) !important;
 	color: #FFF !important;
 	text-shadow:0px 1px 0px rgba(0,0,0,.14) !important;
-	box-shadow:0px 1px 0px rgba(0,0,0,.1), inset 0px 1px 0px rgba(255,255,255,.3);
+	box-shadow:0px 1px 0px rgba(0,0,0,.1), inset 0px 1px 0px rgba(255,255,255,.3) !important;
 	font-weight:bold !important;
-	
+	padding:2px 0 !important;
 	border-top:solid 1px rgba(0,0,0,.2);
 
 
@@ -293,7 +356,7 @@ The Account / Mailbox Pane
 #folderTree {
 	
 	background-color:#D8DEE5 !important;
-	box-shadow:inset -2px 0px 2px rgba(0,0,0,.1) !important;
+	box-shadow:inset -1px 0px 1px rgba(0,0,0,.1) !important;
 }
 
 #folderTree  treechildren::-moz-tree-row(selected) {
@@ -301,9 +364,9 @@ The Account / Mailbox Pane
 	background-image:  -moz-linear-gradient(top, #bdc7dc 0%, #9fadc7 100%) !important;
 	color: #FFF !important;
 	text-shadow:0px 1px 0px rgba(0,0,0,.9) !important;
-	box-shadow:0px 1px 0px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.7) !important;
+	box-shadow:0px 1px 0px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.7), inset -2px 0px 2px rgba(0,0,0,.4) !important;
 	font-weight:bold !important;
-	outline: none !important;
+	outline-style: none !important;
 	border-top:solid 1px rgba(0,0,0,.05) !important;
 	border-bottom:solid 1px rgba(0,0,0,.05) !important;
 }
@@ -434,6 +497,21 @@ tabpanel {
 .tabmail-tab:last-child:not([selected]):not(:hover)::after {
 	-moz-margin-start: 0px;
 	-moz-margin-end: 2px;
+}
+
+toolbarbutton {
+	-moz-appearance:none !important;
+	border-radius:2px;
+}
+toolbarbutton:hover {
+	-moz-appearance:none !important;
+	background-color:rgba(0,0,0,.1) !important;
+	box-shadow:inset 0px 1px 2px rgba(0,0,0,.3), inset 0px -1px 0px rgba(255,255,255,.3) !important;
+
+}
+
+.toolbarbutton-1 menupopup {
+	
 }
 
 
