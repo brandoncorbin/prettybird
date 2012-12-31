@@ -1,9 +1,9 @@
 Pretty Bird for Thunderbird 17
 ==========
 
-![Thunderbird 17 userchrome](http://i.imgur.com/oB0b0.png)
+![Thunderbird 17 userchrome](http://i.imgur.com/ZvWVm.png)
 
-Userchrome.css for Thunderbird 17, turning Ugly in to Pretty. 
+Userchrome.css for Thunderbird 17 
 
 **Few Notes**
 - Only tested with Thunderbird 17 on Linux
