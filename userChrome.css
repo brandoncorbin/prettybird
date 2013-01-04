@@ -93,10 +93,15 @@ Message Window
 	
 }
 
+#msgHeaderViewDeck {
+	-moz-appearance:none !important;
+	display: block !important;
+}
+
 
 #msgHeaderView #otherActionsButton { display:none !important;}
 
-#mgsHeaderView .emailStar {
+#msgHeaderView .emailStar {
 	margin-left:6px !important;
 }
 /*#expandedHeadersTopBox {
